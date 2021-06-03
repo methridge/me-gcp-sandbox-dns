@@ -1,28 +1,53 @@
-# Terraform module to create GCP sandbox network
+# Terraform module to create GCP DNS zone
 
-This module creates a GCP DNS Zone for use as a testing sandbox.
+This module creates a GCP DNS Zone with DNSSec.
 
 ## Deploying
 
 - Create `terraform.tfvars` file
 
-  ```hcl
-  username  = "awesomeuser"
-  project   = "awesomeuser-sandbox"
-  zone_name = "gcp.awesomedomain.com."
-  ```
+```hcl
+username  = "awesomeuser"
+project   = "awesomeuser-sandbox"
+zone_name = "gcp.awesomedomain.com."
+```
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | ~> 0.15 |
+| google | ~> 3.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| google | 3.64.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [google_dns_managed_zone.sandbox-zone](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dns_managed_zone) | resource |
 
 ## Inputs
 
-| Name      | Description                                      |  Type  | Required |
-| :-------- | :----------------------------------------------- | :----: | :------: |
-| username  | User name for access and to prefix all resources | string |   yes    |
-| project   | GCP Project name                                 | string |   yes    |
-| zone_name | DNS Zone name                                    | string |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| project | GCP Project name. ex: awesomeuser-sandbox | `string` | n/a | yes |
+| username | User name for access and to prefix all resources. ex: awesomeuser | `string` | n/a | yes |
+| zone-name | Your public DNS Zone (Must end with a dot). ex: gcp.awesomedomain.com. | `string` | n/a | yes |
 
 ## Outputs
 
-| Name                     | Description       |
-| :----------------------- | :---------------- |
-| sandbox-dnszone-dns-name | DNS Zone          |
-| sandbox-dnszone-name     | GCP Name for Zone |
+| Name | Description |
+|------|-------------|
+| sandbox-dnszone-dns-name | DNS Zone value |
+| sandbox-dnszone-name | GCP DNS Zone Self-link |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
