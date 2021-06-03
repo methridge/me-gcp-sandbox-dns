@@ -3,16 +3,6 @@
  *
  * This module creates a GCP DNS Zone for use as a testing sandbox.
  *
- * ## Deploying
- * 
- * - Create `terraform.tfvars` file
- * 
- *   ```hcl
- *   username  = "awesomeuser"
- *   project   = "awesomeuser-sandbox"
- *   zone_name = "gcp.awesomedomain.com."
- *   ```
- * 
  */
 
 resource "google_dns_managed_zone" "sandbox-zone" {
