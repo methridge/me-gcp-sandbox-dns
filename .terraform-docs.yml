@@ -3,4 +3,4 @@ sort:
   by: required
 
 settings:
-  anchor: true
+  anchor: false
