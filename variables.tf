@@ -8,7 +8,7 @@ variable "project" {
   type        = string
 }
 
-variable "zone_name" {
+variable "zone-name" {
   description = "Your public DNS Zone (Must end with a dot). ex: gcp.awesomedomain.com."
   type        = string
 }

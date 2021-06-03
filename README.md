@@ -1,7 +1,18 @@
-# Terraform module to create GCP sandbox network
+# Terraform module to create GCP DNS zone
 
-This module creates a GCP DNS Zone for use as a testing sandbox.
+This module creates a GCP DNS Zone with DNSSec.
 
+## Deploying
+
+- Create `terraform.tfvars` file
+
+```hcl
+username  = "awesomeuser"
+project   = "awesomeuser-sandbox"
+zone_name = "gcp.awesomedomain.com."
+```
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -31,7 +42,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | project | GCP Project name. ex: awesomeuser-sandbox | `string` | n/a | yes |
 | username | User name for access and to prefix all resources. ex: awesomeuser | `string` | n/a | yes |
-| zone\_name | Your public DNS Zone (Must end with a dot). ex: gcp.awesomedomain.com. | `string` | n/a | yes |
+| zone-name | Your public DNS Zone (Must end with a dot). ex: gcp.awesomedomain.com. | `string` | n/a | yes |
 
 ## Outputs
 
@@ -39,3 +50,4 @@ No modules.
 |------|-------------|
 | sandbox-dnszone-dns-name | DNS Zone value |
 | sandbox-dnszone-name | GCP DNS Zone Self-link |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
