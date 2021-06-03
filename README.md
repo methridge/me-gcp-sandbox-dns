@@ -29,9 +29,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| project | GCP Project name | `string` | `"awesomeuser-sandbox"` | no |
-| username | User name for access and to prefix all resources | `string` | `"awesomeuser"` | no |
-| zone\_name | Your public DNS Zone (Must end with a dot) | `string` | `"gcp.awesomedomain.com."` | no |
+| project | GCP Project name. ex: awesomeuser-sandbox | `string` | n/a | yes |
+| username | User name for access and to prefix all resources. ex: awesomeuser | `string` | n/a | yes |
+| zone\_name | Your public DNS Zone (Must end with a dot). ex: gcp.awesomedomain.com. | `string` | n/a | yes |
 
 ## Outputs
 
