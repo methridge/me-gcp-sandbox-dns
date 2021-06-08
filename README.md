@@ -13,19 +13,18 @@ zone-name = "gcp.awesomedomain.com."
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
-| Name      | Version |
-| --------- | ------- |
-| terraform | ~> 0.15 |
-| google    | ~> 3.0  |
+| Name | Version |
+|------|---------|
+| terraform | ~> 1.0 |
+| google | ~> 3.0 |
 
 ## Providers
 
-| Name   | Version |
-| ------ | ------- |
-| google | 3.64.0  |
+| Name | Version |
+|------|---------|
+| google | 3.64.0 |
 
 ## Modules
 
@@ -33,23 +32,22 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                    | Type     |
-| --------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Name | Type |
+|------|------|
 | [google_dns_managed_zone.sandbox-zone](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/dns_managed_zone) | resource |
 
 ## Inputs
 
-| Name      | Description                                                            | Type     | Default | Required |
-| --------- | ---------------------------------------------------------------------- | -------- | ------- | :------: |
-| project   | GCP Project name. ex: awesomeuser-sandbox                              | `string` | n/a     |   yes    |
-| username  | User name for access and to prefix all resources. ex: awesomeuser      | `string` | n/a     |   yes    |
-| zone-name | Your public DNS Zone (Must end with a dot). ex: gcp.awesomedomain.com. | `string` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| project | GCP Project name. ex: awesomeuser-sandbox | `string` | n/a | yes |
+| username | User name for access and to prefix all resources. ex: awesomeuser | `string` | n/a | yes |
+| zone-name | Your public DNS Zone (Must end with a dot). ex: gcp.awesomedomain.com. | `string` | n/a | yes |
 
 ## Outputs
 
-| Name                     | Description            |
-| ------------------------ | ---------------------- |
-| sandbox-dnszone-dns-name | DNS Zone value         |
-| sandbox-dnszone-name     | GCP DNS Zone Self-link |
-
+| Name | Description |
+|------|-------------|
+| sandbox-dnszone-dns-name | DNS Zone value |
+| sandbox-dnszone-name | GCP DNS Zone Self-link |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
