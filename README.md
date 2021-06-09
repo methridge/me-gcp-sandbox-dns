@@ -17,14 +17,14 @@ zone-name = "gcp.awesomedomain.com."
 
 | Name | Version |
 |------|---------|
-| terraform | ~> 1.0 |
-| google | ~> 3.0 |
+| terraform | >= 0.15 |
+| google | >= 3.5 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| google | 3.64.0 |
+| google | 3.71.0 |
 
 ## Modules
 
